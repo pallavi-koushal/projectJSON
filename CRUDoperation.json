@@ -1,0 +1,350 @@
+{
+  "version": 6,
+  "entities": [
+    {
+      "entity": {
+        "type": "Project",
+        "id": "c87c1438-8f88-44dc-ab87-1fc7226a8940",
+        "name": "CRUD"
+      },
+      "children": [
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "requestBody": true,
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+              "name": "POST"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "{\n    \"token\": \"90935398|-31948797202635845|90932155\",\n      \"cmd\": \"REMOVE\",\n    \"dbName\": \"Student\",\n    \"rel\": \"std-rel\",\n  \"record\":1\n \n}"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "scheme": {
+                "name": "http",
+                "version": "V11"
+              },
+              "host": "api.login2explore.com:5577",
+              "path": "/api/iml"
+            },
+            "id": "4248ea15-414d-4a34-a859-952380c96790",
+            "name": "Delete",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "assertions": [
+              {
+                "comparison": "Matches",
+                "subject": "ResponseStatus",
+                "path": "code",
+                "value": "/^2[0-9]{2}$/g"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "requestBody": true,
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+              "name": "POST"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "{\n    \"token\": \"90935398|-31948797202635845|90932155\",\n    \"dbName\": \"Student\",\n    \"cmd\": \"GET_ALL\",\n    \"rel\": \"std-rel\",\n    \"pageNo\": 1,\n    \"pageSize\": 5,\n    \"createTime\": true,\n    \"updateTime\": true\n}"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "scheme": {
+                "name": "http",
+                "version": "V11"
+              },
+              "host": "api.login2explore.com:5577",
+              "path": "/api/irl"
+            },
+            "id": "d5d8034f-7e69-4818-81c1-8a629a377423",
+            "name": "Retrieve",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "assertions": [
+              {
+                "comparison": "Matches",
+                "subject": "ResponseStatus",
+                "path": "code",
+                "value": "/^2[0-9]{2}$/g"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "requestBody": true,
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+              "name": "POST"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "{\n    \"token\": \"90935398|-31948797202635845|90932155\",\n    \"dbName\": \"Student\",\n    \"cmd\": \"UPDATE\",\n    \"rel\": \"Std-rel\",\n  \"JsonStr\":\n  {\n    \"1\":{\"name\":\"priya\"},\n  }\n\n}"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "scheme": {
+                "name": "http",
+                "version": "V11"
+              },
+              "host": "api.login2explore.com:5577",
+              "path": "/api/iml"
+            },
+            "id": "12382490-5673-4aea-907d-fbd5fc2e5194",
+            "name": "Update",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "assertions": [
+              {
+                "comparison": "Matches",
+                "subject": "ResponseStatus",
+                "path": "code",
+                "value": "/^2[0-9]{2}$/g"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "requestBody": true,
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+              "name": "POST"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "{\n    \"token\": \"90935398|-31948797202635845|90932155\",\n    \"cmd\": \"PUT\",\n    \"dbName\": \"Student\",\n    \"rel\": \"std-rel\",\n    \n    \"jsonStr\": {\n        \"name\": \"pallavi koushal\",\n        \"email\": \"pallavi@gmail.com\",\n        \"password\": \"12335\",\n      \"mobile\":\"78965482140\"\n      \"Address\":\"juni indore\"\n       \n\n    }\n}"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "scheme": {
+                "name": "http",
+                "version": "V11"
+              },
+              "host": "api.login2explore.com:5577",
+              "path": "/api/iml"
+            },
+            "id": "16262899-a065-4f35-a061-683314c58cf4",
+            "name": "insert",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "assertions": [
+              {
+                "comparison": "Matches",
+                "subject": "ResponseStatus",
+                "path": "code",
+                "value": "/^2[0-9]{2}$/g"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "requestBody": true,
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+              "name": "POST"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "{\n    \"token\": \"90935398|-31948797202635845|90932155\",\n    \"cmd\": \"PUT_ALL\",\n    \"dbName\": \"Student\",\n    \"rel\": \"std-rel\",\n    \"templateStr\": {},\n    \"colsAutoIndex\": true,\n    \"jsonStr\": [\n        {\n            \"name\": \"Pranitha\",\n            \"email\": \"pranitha@gmail.com\",\n            \"password\": \"3203\",\n          \"mobile\":\"1234568889\",\n          \"address\":\"dhar\"\n\n        }\n    \n    \n}"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "scheme": {
+                "name": "http",
+                "version": "V11"
+              },
+              "host": "api.login2explore.com:5577",
+              "path": "/api/iml"
+            },
+            "id": "ae2254c0-9ed9-486b-a668-af94e9dce6f1",
+            "name": "multiple Insert",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "assertions": [
+              {
+                "comparison": "Matches",
+                "subject": "ResponseStatus",
+                "path": "code",
+                "value": "/^2[0-9]{2}$/g"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "requestBody": true,
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+              "name": "POST"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "{\n    \"token\": \"90935398|-31948797202635845|90932155\",\n    \"dbName\": \"Student\",\n    \"rel\": \"std-rel\",\n    \"jsonStr\": [\"address\",\"empEmail\"]\n}"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "scheme": {
+                "name": "http",
+                "version": "V11"
+              },
+              "host": "api.login2explore.com:5577",
+              "path": "/jpdb/iml/col/v01/remove"
+            },
+            "id": "d38a9e6d-aa73-41f9-b87a-68b0616953c0",
+            "name": "removeColoumn",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "assertions": [
+              {
+                "comparison": "Matches",
+                "subject": "ResponseStatus",
+                "path": "code",
+                "value": "/^2[0-9]{2}$/g"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "requestBody": true,
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+              "name": "POST"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "{\n    \"token\": \"90935398|-31948797202635845|90932155\",\n    \"dbName\": \"Student\",\n    \"cmd\": \"GET_ALL\",\n    \"rel\": \"std-rel\",\n    \"pageNo\": 1,\n    \"pageSize\": 5,\n    \"createTime\": true,\n    \"updateTime\": true\n}"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "scheme": {
+                "name": "http",
+                "version": "V11"
+              },
+              "host": "api.login2explore.com:5577",
+              "path": "/api/irl"
+            },
+            "id": "cfdbcbf6-041e-4965-a8bd-7285f049da2a",
+            "name": "retrieveAllRecord",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "assertions": [
+              {
+                "comparison": "Matches",
+                "subject": "ResponseStatus",
+                "path": "code",
+                "value": "/^2[0-9]{2}$/g"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

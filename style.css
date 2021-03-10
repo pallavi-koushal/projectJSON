@@ -1,0 +1,22 @@
+
+*{
+    padding-top: 10px;
+ margin: 0;    
+}
+body{
+   
+    background-size: cover;
+
+    font-family: sans-serif;
+    
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #003366;
+  padding: 15px;
+  width: 350px;
+  margin: auto;
+  color: white;
+}
+
